@@ -40,9 +40,9 @@ $(".btn").click(function (e) {
   userClickedPattern.push(userChosenColor);
 
   animatePress(userChosenColor);
+  playAudio(userChosenColor);
 
   // console.log(userChosenColor);
-  console.log(userClickedPattern);
 
   checkAnswer(userClickedPattern.length - 1);
 });
@@ -98,7 +98,6 @@ function playAudio(name) {
 
 function animatePress(currentColor) {
   $(`#${currentColor}`).addClass(`${currentColor}-glow`);
-  playAudio(currentColor);
   setTimeout(() => {
     $(`#${currentColor}`).removeClass(`${currentColor}-glow`);
   }, 500);
