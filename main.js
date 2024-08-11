@@ -69,7 +69,7 @@ function checkAnswer(currentLevel) {
     if (userClickedPattern.length == gamePattern.length) {
       setTimeout(() => {
         nextSequence();
-      }, 2000);
+      }, 1000);
     }
   } else {
     $("body").addClass("wrong");
